@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Raposa_Angular';
-  christian = 'bayle'
+
 
   name: string = '';
   listofnames: string[]=['Chan', 'Vee', 'Jovs']
