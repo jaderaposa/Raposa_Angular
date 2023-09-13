@@ -7,4 +7,16 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Raposa_Angular';
+  christian = 'bayle'
+
+  name: string = '';
+  listofnames: string[]=['Chan', 'Vee', 'Jovs']
+  addName(){
+    console.log("add button is working!");
+    this.listofnames.push(this.name)
+    console.log(this.listofnames);
+  }
+  delete(index: number) {
+    this.listofnames.splice(index, 1);
+  }
 }
