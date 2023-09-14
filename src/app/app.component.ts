@@ -10,13 +10,13 @@ export class AppComponent {
 
 
   name: string = '';
-  listofnames: string[]=['Chan', 'Vee', 'Jovs']
+  listofnames: string[]=['Jaded', 'unknown price']
   addName(){
     console.log("add button is working!");
     this.listofnames.push(this.name)
     console.log(this.listofnames);
   }
-  delete(index: number) {
+  deleteName(index: number) {
     this.listofnames.splice(index, 1);
   }
 }

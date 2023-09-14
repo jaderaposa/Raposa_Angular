@@ -12,9 +12,9 @@
     <ul *ngFor="let name of listofnames; let i = index">
       <li>
         {{ name }}
-        <button (click)="delete(i)">DELETE</button>
+        <button (click)="deleteName(i)">DELETE</button>
       </li>
     </ul>
-    <p *ngIf="this.listofnames.length > 6">Cannot exceed more than 6</p>
+    <p *ngIf="this.listofnames.length >= 6">Cannot exceed more than 6</p>
 </body>
 </html>

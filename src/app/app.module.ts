@@ -10,7 +10,7 @@ import { SampleComponent } from './sample/sample.component';
     SampleComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule, 
     FormsModule
   ],
   providers: [],
