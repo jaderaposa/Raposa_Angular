@@ -3,18 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Task Checker</title>
 </head>
 <body>
-    <h1>Hello World</h1>
-    <input type="text" [(ngModel)]="name">
-    <button (click)="addName()">ADD</button>
-    <ul *ngFor="let name of listofnames; let i = index">
-      <li>
-        {{ name }}
-        <button (click)="deleteName(i)">DELETE</button>
-      </li>
-    </ul>
-    <p *ngIf="this.listofnames.length >= 6">Cannot exceed more than 6</p>
+  <app-navbar></app-navbar>
+    <h1>Task Checker</h1>
+    <div class="table-container">
+      <table>
+        <tr>
+          <th><input type="text" placeholder="Add Task Here" [(ngModel)]="taskName"></th>
+          <th><button (click)="addName()">ADD</button></th>
+        </tr>
+        <tr *ngFor="let task of listoftasks; let i = index">
+          <td>{{ task.name }}</td>
+          <td><button (click)="deleteName(i)">DELETE</button></td>
+          <td><input type="checkbox" [(ngModel)]="task.checked"></td>
+        </tr>
+      </table>
+    </div>
+    <p *ngIf="this.listoftasks.length >= 6">Cannot exceed more than 6</p>
 </body>
 </html>

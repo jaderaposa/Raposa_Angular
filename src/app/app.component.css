@@ -1,0 +1,27 @@
+* {
+    list-style-type: none;
+    text-align: center;
+}
+
+.table-container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    /* height: 100vh; Ensure the container takes up the full viewport height */
+}
+
+input {
+    border: none;
+}
+
+table {
+    /* width: 100%; */
+    border-collapse: collapse;
+    margin: 20px;
+}
+
+th,td {
+    border: 1px solid #000;
+    padding: 10px;
+    text-align: center;
+}

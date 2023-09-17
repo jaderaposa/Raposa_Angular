@@ -7,16 +7,16 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Raposa_Angular';
+  taskName: string = '';
+  listoftasks: { name: string, checked: boolean }[] = [];
 
-
-  name: string = '';
-  listofnames: string[]=['Jaded', 'unknown price']
-  addName(){
-    console.log("add button is working!");
-    this.listofnames.push(this.name)
-    console.log(this.listofnames);
+  addName() {
+    this.listoftasks.push({ name: this.taskName, checked: false });
+    this.taskName = ''; // Clear the input field after adding a task
+    console.log(this.listoftasks);
   }
+
   deleteName(index: number) {
-    this.listofnames.splice(index, 1);
+    this.listoftasks.splice(index, 1);
   }
 }
